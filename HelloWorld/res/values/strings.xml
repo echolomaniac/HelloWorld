@@ -12,9 +12,17 @@
     <string name="button_exit">Exit</string>
     <string name="button_list">Countries</string>
     <integer-array name="list_flags"> 
-        <item>2130837594</item>
         <item>2130837591</item>
+        <item>2130837600</item>
         <item>2130837593</item>
+        <item>2130837594</item>
+        <item>2130837595</item>
+        <item>2130837597</item>
+        <item>2130837599</item>
+        <item>2130837592</item>
+        <item>2130837598</item>
+        <item>2130837601</item>
+        
     </integer-array>
     <string-array name="list_countries">
 

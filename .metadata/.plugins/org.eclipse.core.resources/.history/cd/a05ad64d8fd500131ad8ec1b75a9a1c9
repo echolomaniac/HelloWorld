@@ -1,0 +1,16 @@
+package com.example.helloworld.models;
+
+public class Country {
+	public static String name;
+	public static int icon;
+	
+	public Country() {
+		super();
+	}
+	
+	public Country(int icon, String name) {
+		super();
+		this.icon = icon;
+		this.name = name;
+	}
+}

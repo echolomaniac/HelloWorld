@@ -1,0 +1,25 @@
+package com.example.helloworld.List;
+
+
+import com.example.helloworld.models.Country;
+
+import android.content.Context;
+import android.widget.ArrayAdapter;
+
+public class CountryListAdapter extends ArrayAdapter<String> {
+	Context context;
+	int layoutResourceId;
+	Country country[] = null;
+
+	public CountryListAdapter(Context context, int layoutResourceId,
+			Country[] data) {
+		//super(context, layoutResourceId, data);
+		// TODO Auto-generated constructor stub
+		this.context = context;
+		this.layoutResourceId = layoutResourceId;
+		this.country = data;
+	}
+
+	
+	
+}

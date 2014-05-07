@@ -1,0 +1,46 @@
+package com.example.helloworld.List;
+
+
+
+import com.example.helloworld.R;
+import com.example.helloworld.models.Country;
+
+import android.app.ListActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListAdapter;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
+import android.widget.SimpleCursorAdapter;
+
+public class CountryList extends ListActivity {
+	ListView countryList; 
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.country_list);
+		
+		
+		//ArrayAdapter adapter = new ArrayAdapter<String>(this, 
+				//		android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.list_countries));
+		
+		String[] countries  = getResources().getStringArray(R.array.list_countries);
+		
+		Country[] country = new Country(0, countries[0].toString());
+		
+		CountryListAdapter adapter = new CountryListAdapter(this,
+				R.layout.listview_item_row, country);
+		
+		//View header = (View)getLayoutInflater().inflate(R.layout.listview_header_row, null);
+		
+		//addHeaderView(header);
+		setListAdapter(adapter);
+	}
+	
+	
+
+
+}

@@ -1,0 +1,11 @@
+package com.example.helloworld.List;
+
+import android.app.Activity;
+import android.widget.ArrayAdapter;
+
+public class CountryListAdapter extends ArrayAdapter<String> {
+	
+	public CountryListAdapter(Activity context, int row, ) {
+		
+	}
+}

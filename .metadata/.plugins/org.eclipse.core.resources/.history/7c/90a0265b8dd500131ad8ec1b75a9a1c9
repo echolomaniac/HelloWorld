@@ -1,0 +1,52 @@
+package com.example.helloworld.List;
+
+
+import com.example.helloworld.R;
+import com.example.helloworld.models.Country;
+
+import android.app.Activity;
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+public class CountryListAdapter extends ArrayAdapter<String> {
+	Context context;
+	int layoutResourceId;
+	Country country[] = null;
+
+	public CountryListAdapter(Context context, int layoutResourceId,
+			Country[] country) {
+		super(context, layoutResourceId, country);
+		// TODO Auto-generated constructor stub
+		this.context = context;
+		this.layoutResourceId = layoutResourceId;
+		this.country = country;
+	}
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+    	View row = convertView;
+    	CountryHolder holder = null;
+    	
+    	if(row == null) {
+    		LayoutInflater inflater = ((Activity)context).getLayoutInflater();
+    		row = inflater.inflate(layoutResourceId, parent, false);
+    		
+    		holder = new CountryHolder();
+    		holder.imageIcon = (ImageView)row.findViewById(R.id.imgIcon);
+    	}
+    	
+    	
+    	return row;
+    }
+    
+    static class CountryHolder {
+    	ImageView imageIcon;
+    	TextView name;
+    }
+	
+}

@@ -1,0 +1,20 @@
+package com.example.helloworld.List;
+
+import java.util.List;
+
+import android.content.Context;
+import android.media.Image;
+import android.widget.ArrayAdapter;
+
+public class CountryListAdapter extends ArrayAdapter<String> {
+
+	public CountryListAdapter(Context context, int resource,
+			List<String> objects) {
+		super(context, resource, objects);
+		// TODO Auto-generated constructor stub
+		
+		
+	}
+	
+	
+}

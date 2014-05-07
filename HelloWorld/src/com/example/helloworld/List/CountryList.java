@@ -28,17 +28,17 @@ public class CountryList extends ListActivity {
 		
 		String[] countries = getResources().getStringArray(R.array.list_countries);
 		int[] flags = getResources().getIntArray(R.array.list_flags);
-		Country country;
-		
-		int j = 0;
+		Country country;	
+
+		int j = 0; //image counter
 		ArrayList<Country> data = new ArrayList<Country>();
 		for(int i = 0; i < countries.length; i++) {
-			if(j<3) {
+			if(j<10) { //10 images
 				country = new Country(flags[j], countries[i].toString());
 				data.add(country);
 				j++;
 			}
-			else {
+			else { //reset image counter = 0
 				j = 0;
 			}
 			
