@@ -9,13 +9,7 @@ import com.example.helloworld.models.Country;
 
 import android.app.ListActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
-import android.widget.SimpleCursorAdapter;
 
 public class CountryList extends ListActivity {
 	ListView countryList; 
@@ -28,15 +22,24 @@ public class CountryList extends ListActivity {
 		
 		String[] countries = getResources().getStringArray(R.array.list_countries);
 		int[] flags = getResources().getIntArray(R.array.list_flags);
+		String[] continents = getResources().getStringArray(R.array.list_continents);
 		Country country;	
 
 		int j = 0; //image counter
+		int k = 0; //continent counter
 		ArrayList<Country> data = new ArrayList<Country>();
 		for(int i = 0; i < countries.length; i++) {
 			if(j<10) { //10 images
-				country = new Country(flags[j], countries[i].toString());
-				data.add(country);
-				j++;
+				if(k < 7) {
+					country = new Country(flags[j], countries[i].toString(), continents[k]);
+					data.add(country);
+					k++; //continent 
+				}
+				else {
+					k = 0;
+				}
+				
+				j++; //image
 			}
 			else { //reset image counter = 0
 				j = 0;

@@ -501,5 +501,14 @@
         <item>Zimbabwe</item>
 
     </string-array>
+    <string-array name="list_continents">
+        <item >North America</item>
+        <item >South America</item>
+        <item >Asia</item>
+        <item >Africa</item>
+        <item >Australia</item>
+        <item >Antartica</item>
+        <item >Europe</item>
+    </string-array>
 
 </resources>

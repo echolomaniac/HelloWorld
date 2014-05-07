@@ -4,6 +4,7 @@ int anim abc_slide_in_bottom 0x7f040002
 int anim abc_slide_in_top 0x7f040003
 int anim abc_slide_out_bottom 0x7f040004
 int anim abc_slide_out_top 0x7f040005
+int array list_continents 0x7f0c0002
 int array list_countries 0x7f0c0001
 int array list_flags 0x7f0c0000
 int attr actionBarDivider 0x7f01000f
@@ -258,7 +259,7 @@ int id action_context_bar 0x7f05001d
 int id action_menu_divider 0x7f050016
 int id action_menu_presenter 0x7f050017
 int id action_mode_close_button 0x7f050024
-int id action_settings 0x7f050046
+int id action_settings 0x7f050047
 int id activity_chooser_view_content 0x7f050025
 int id always 0x7f05000b
 int id beginning 0x7f050011
@@ -314,6 +315,7 @@ int id tabMode 0x7f050002
 int id textView1 0x7f050040
 int id title 0x7f05002b
 int id top_action_bar 0x7f050020
+int id txtDetail 0x7f050046
 int id txtTitle 0x7f050045
 int id up 0x7f050021
 int id useLogo 0x7f050003
