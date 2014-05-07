@@ -9,7 +9,11 @@ import com.example.helloworld.models.Country;
 
 import android.app.ListActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class CountryList extends ListActivity {
 	ListView countryList; 
@@ -51,8 +55,11 @@ public class CountryList extends ListActivity {
 		CountryListAdapter adapter = new CountryListAdapter(this,
 				R.layout.listview_item_row, data);
 		
+		
 		setListAdapter(adapter);
 	}
+	
+	
 	
 	
 

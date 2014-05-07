@@ -39,9 +39,9 @@ public class CountryListAdapter extends ArrayAdapter<Country> {
     		row = inflater.inflate(layoutResourceId, parent, false);
     		
     		holder = new CountryHolder();
-    		holder.countryImageView = (ImageView)row.findViewById(R.id.imgIcon);
-    		holder.countryTextView = (TextView)row.findViewById(R.id.txtTitle);
-    		holder.countryDetailTextView = (TextView)row.findViewById(R.id.txtDetail);
+    		holder.countryImageView = (ImageView)row.findViewById(R.id.country_icon);
+    		holder.countryTextView = (TextView)row.findViewById(R.id.country_title);
+    		holder.countryDetailTextView = (TextView)row.findViewById(R.id.country_detail);
     		
     		row.setTag(holder);
     	}
