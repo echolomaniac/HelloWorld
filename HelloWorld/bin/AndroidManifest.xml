@@ -33,6 +33,11 @@
             android:label="@string/app_name" >
         </activity>
         
+         <activity
+            android:name="com.example.helloworld.askNumber.AskNumberActivity"
+            android:label="@string/app_name" >
+        </activity>
+        
     </application>
 
 </manifest>

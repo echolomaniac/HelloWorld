@@ -19,49 +19,39 @@
             android:layout_width="match_parent" 
             android:layout_height="0dp" 
             android:layout_weight="0.3"
-            android:src="@drawable/france_icon"
-            android:background="#0000" />
+            android:src="@drawable/france_icon" />
         
         <TextView
             android:id="@+id/textView1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.10"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.25"
             android:text="@string/enter_name" />
 
         <EditText
             android:id="@+id/nameEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.1"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.25"
             android:ems="10"
             android:hint="@string/hint_enter_name" />
 
-        <LinearLayout
+        <Button
+            android:id="@+id/helloButton"
             android:layout_width="fill_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.5" >
+            android:layout_weight="0.25"
+            android:text="@string/hello_button"
+            android:textSize="20sp" />
 
-            <Button
-                android:id="@+id/helloButton"
-                android:layout_width="0dp"
-                android:layout_weight="0.5"
-                android:layout_height="match_parent"
-                android:text="@string/hello_button"
-                android:textSize="20sp" />
-
-            <Button
-                android:id="@+id/listButton"
-                android:layout_width="0dp"
-                android:layout_weight = "0.5"
-                android:layout_height="match_parent"
-                android:text="@string/button_list"
-                android:textSize="20sp" />
-
-        </LinearLayout>
+        <Button
+            android:id="@+id/listButton"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.25"
+            android:text="@string/button_list"
+            android:textSize="20sp" />
 
     </LinearLayout>
-
-    
 
 </RelativeLayout>

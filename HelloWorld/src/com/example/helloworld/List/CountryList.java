@@ -2,6 +2,7 @@ package com.example.helloworld.List;
 
 
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 
 import com.example.helloworld.R;
@@ -25,17 +26,19 @@ public class CountryList extends ListActivity {
 		setContentView(R.layout.country_list);
 		
 		String[] countries = getResources().getStringArray(R.array.list_countries);
-		int[] flags = getResources().getIntArray(R.array.list_flags);
+		String[] icons = getResources().getStringArray(R.array.list_icons);
+		int[] resIDs = getIntIds(icons);
 		String[] continents = getResources().getStringArray(R.array.list_continents);
 		Country country;	
-
+		
+		
 		int j = 0; //image counter
 		int k = 0; //continent counter
 		ArrayList<Country> data = new ArrayList<Country>();
 		for(int i = 0; i < countries.length; i++) {
 			if(j<10) { //10 images
 				if(k < 7) {
-					country = new Country(flags[j], countries[i].toString(), continents[k]);
+					country = new Country(resIDs[j], countries[i].toString(), continents[k]);
 					data.add(country);
 					k++; //continent 
 				}
@@ -59,6 +62,13 @@ public class CountryList extends ListActivity {
 		setListAdapter(adapter);
 	}
 	
+	public int[] getIntIds(String[] images){
+	    int[] temp = new int[images.length];
+	    for(int i=0; i< images.length; i++){
+	        temp[i] = getResources().getIdentifier(images[i] , "drawable", getPackageName());
+	    }
+	    return temp;
+	}
 	
 	
 	

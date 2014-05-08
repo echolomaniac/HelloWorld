@@ -9,8 +9,7 @@
          android:layout_height="50dp"
          android:layout_alignParentLeft="true"
          android:layout_alignParentTop="true"
-         android:layout_margin="5dp"
-         android:src="@drawable/norway_flag_icon" />
+         android:layout_margin="5dp" />
 
      <TextView
          android:id="@+id/country_title"
