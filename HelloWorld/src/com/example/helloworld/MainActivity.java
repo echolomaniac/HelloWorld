@@ -1,6 +1,7 @@
 package com.example.helloworld;
 
 import com.example.helloworld.List.CountryList;
+import com.example.helloworld.askNumber.AskNumberActivity;
 
 import android.app.Fragment;
 import android.app.FragmentTransaction;
@@ -13,8 +14,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.webkit.WebView.FindListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 public class MainActivity extends Activity {
 	
@@ -57,6 +60,7 @@ public class MainActivity extends Activity {
     public static class PlaceholderFragment extends Fragment {
     	Button helloButton;
     	Button countryButton;
+    	ImageButton numberButton;
     	EditText nameEditText;
     	
         public PlaceholderFragment() {
@@ -105,6 +109,18 @@ public class MainActivity extends Activity {
 				}
         		
         	});
+        	
+        	numberButton = (ImageButton)rootView.findViewById(R.id.france_icon);
+        	numberButton.setOnClickListener(new OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					// TODO Auto-generated method stub
+					//create intent
+		        	Intent intent = new Intent(getActivity(), AskNumberActivity.class);
+		        	startActivity(intent);
+				}
+			});
         	
             return rootView;
         }

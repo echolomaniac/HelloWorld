@@ -1,0 +1,62 @@
+package com.example.helloworld.List;
+
+
+
+import java.util.ArrayList;
+
+import com.example.helloworld.R;
+import com.example.helloworld.models.Country;
+
+import android.app.ListActivity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListAdapter;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
+import android.widget.SimpleCursorAdapter;
+
+public class CountryList extends ListActivity {
+	ListView countryList; 
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.country_list);
+		
+		String[] countries = getResources().getStringArray(R.array.list_countries);
+		int[] flags = getResources().getIntArray(R.array.list_flags);
+		Country country;
+		
+		Log.v("Flags", "" + R.drawable.argentina_flag_icon + ":" + R.drawable.usa_flag_icon + ":" + R.drawable.bahamas_flag_icon +
+				":" + R.drawable.brazil_flag_icon + ":" + R.drawable.france_flag_icon + ":" + R.drawable.italy_flag_icon + 
+				":" + R.drawable.south_africa_flag_icon + ":" + R.drawable.australia_flag_icon + ":" + R.drawable.norway_flag_icon +
+				":" + R.drawable.vietnam_flag_icon);
+		
+		int j = 0; //image counter
+		ArrayList<Country> data = new ArrayList<Country>();
+		for(int i = 0; i < countries.length; i++) {
+			if(j<3) { //3 images
+				country = new Country(flags[j], countries[i].toString());
+				data.add(country);
+				j++;
+			}
+			else { //reset image counter = 0
+				j = 0;
+			}
+			
+		}
+		
+
+		CountryListAdapter adapter = new CountryListAdapter(this,
+				R.layout.listview_item_row, data);
+		
+		setListAdapter(adapter);
+	}
+	
+	
+
+
+}

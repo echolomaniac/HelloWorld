@@ -11,11 +11,6 @@
     <string name="field_Hello">Hello!</string>
     <string name="button_exit">Exit</string>
     <string name="button_list">Countries</string>
-    <integer-array name="list_flags"> 
-        <item>2130837594</item>
-        <item>2130837591</item>
-        <item>2130837593</item>
-    </integer-array>
     <string-array name="list_countries">
 
         <item>Afghanistan</item>
@@ -493,5 +488,33 @@
         <item>Zimbabwe</item>
 
     </string-array>
+    <string-array name="list_continents">
+        <item >North America</item>
+        <item >South America</item>
+        <item >Asia</item>
+        <item >Africa</item>
+        <item >Australia</item>
+        <item >Antartica</item>
+        <item >Europe</item>
+    </string-array>
+    <string-array name="list_icons">
+        <item >argentina_flag_icon</item>
+        <item >australia_flag_icon</item>
+        <item >bahamas_flag_icon</item>
+        <item >brazil_flag_icon</item>
+        <item >france_flag_icon</item>
+        <item >italy_flag_icon</item>
+        <item >norway_flag_icon</item>
+        <item >south_africa_flag_icon</item>
+        <item >usa_flag_icon</item>
+        <item >vietnam_flag_icon</item>
+    </string-array>
+    <string name="button_ok">OK</string>
+    <plurals name="ask_for_a_number">
+        <item quantity="zero">No buttons.</item>
+        <item quantity="one">One button.</item>
+        <item quantity="other">%d buttons.</item>
+    </plurals>
+  
 
 </resources>
